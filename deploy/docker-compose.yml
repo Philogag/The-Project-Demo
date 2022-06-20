@@ -1,0 +1,62 @@
+version: "3"
+
+services:
+
+  nginx:
+    image: nginx:alpine
+    container_name: sport_meeting_nginx
+    restart: unless-stopped
+    ports:
+      - 80:80
+      - 8000:8000
+      - 8001:8001
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ../log/nginx:/logs
+      - ../frontend/desktop/dist:/dist/desktop
+
+  sql:
+    image: postgres:14.1-alpine
+    container_name: sport_meeting_pgsql
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    environment:
+      ALLOW_IP_RANGE: 0.0.0.0/0
+
+#  redis:
+#    image: redis:6.2-alpine
+#    restart: unless-stopped
+#    command:
+#      - "redis-server /etc/redis/redis.conf"
+#    ports:
+#      - "6379:6379"
+#    volumes:
+#      - ./conf/redis.conf:/etc/redis/redis.conf
+#      - ./data:/data
+
+  backend:
+    image: sport_meeting_backend
+    container_name: sport_meeting_backend
+    restart: unless-stopped
+    volumes:
+      - ../backend:/deploy/src/backend
+      - ../log/backend:/deploy/src/log
+    ports:
+      - "8080:8080"
+    environment:
+      FLASK_CONFIG_TOML: "/deploy/src/backend/app.production.toml"
+  
+  backend_dev:
+    image: sport_meeting_backend
+    container_name: sport_meeting_backend_dev
+    restart: unless-stopped
+    volumes:
+      - ../backend:/deploy/src/backend
+      - ../log/backend:/deploy/src/log
+    ports:
+      - "8081:8080"
+    environment:
+      FLASK_CONFIG_TOML: "/deploy/src/backend/app.test.toml"

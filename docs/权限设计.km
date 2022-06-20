@@ -1,0 +1,336 @@
+{
+    "root": {
+        "data": {
+            "id": "ch16cymhw6w0",
+            "created": 1641734641945,
+            "text": "权限设计"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "ch16drlv0kg0",
+                    "created": 1641734705033,
+                    "text": "权限"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "ch16iodhhq00",
+                            "created": 1641735089818,
+                            "text": "权限类别",
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "ch16e1ihtzk0",
+                                    "created": 1641734726597,
+                                    "text": "页面权限：能否访问前端页面"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "ch16e3fry8g0",
+                                    "created": 1641734730786,
+                                    "text": "数据权限：能否访问后端接口"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "ch16j9d3en40",
+                            "created": 1641735135506,
+                            "text": "授权方式"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "ch16kuyfey00",
+                                    "created": 1641735260872,
+                                    "text": "通过角色批量授权",
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "ch16jcajohs0",
+                                            "created": 1641735141882,
+                                            "text": "用户 -> 角色 -> 权限 -> 接口"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "ch16kz4ngdk0",
+                                    "created": 1641735269956,
+                                    "text": "直接授权到用户",
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "ch16jsuuavc0",
+                                            "created": 1641735177938,
+                                            "text": "用户 -> 权限 -> 接口"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "ch16eh4rbpc0",
+                    "created": 1641734760595,
+                    "text": "数据实体",
+                    "expandState": "expand",
+                    "layout_mind_offset": {
+                        "x": -914,
+                        "y": -308
+                    }
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "ch16dff5cmo0",
+                            "created": 1641734678506,
+                            "text": "角色Role"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "ch16f1yl5ns0",
+                            "created": 1641734805935,
+                            "text": "用户User"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "ch16elbsurs0",
+                            "created": 1641734769728,
+                            "text": "权限DataPermission"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "ch16qrchi8o0",
+                                    "created": 1641735723200,
+                                    "text": "权限类别"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "ch16qt9ucmg0",
+                                            "created": 1641735727394,
+                                            "text": "Allow"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "ch16qw89mw00",
+                                            "created": 1641735733829,
+                                            "text": "AllowAll（for Root）"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "ch16f5nmvo00",
+                            "created": 1641734813979,
+                            "text": "权限详情DataPermissionDetail"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "ch16h0gi7k00",
+                            "created": 1641734959393,
+                            "text": "接口SystemUrl"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "ch16i0iaiqw0",
+                                    "created": 1641735037865,
+                                    "text": "后端接口Data"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "ch16i696rio0",
+                                    "created": 1641735050375,
+                                    "text": "前端接口View"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "ch16pil7e480",
+                    "created": 1641735625772,
+                    "text": "后端",
+                    "layout_mind_offset": {
+                        "x": 847,
+                        "y": 367
+                    }
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "ch16pr7hz0w0",
+                            "created": 1641735644535,
+                            "text": "自动注入"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "ch16pvnlr0o0",
+                                    "created": 1641735654215,
+                                    "text": "Role for root admin"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "ch16q03tlw00",
+                                    "created": 1641735663903,
+                                    "text": "Backend API list"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "ch16s81oik80",
+                                    "created": 1641735837916,
+                                    "text": "DataPermission for root admin as AllowAll"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "ch16th6742g0",
+                            "created": 1641735936145,
+                            "text": "request预处理拦截",
+                            "layout_right_offset": {
+                                "x": 6,
+                                "y": 38.00000000000006
+                            }
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "ch16tofjfew0",
+                                    "created": 1641735951947,
+                                    "text": "AuthCheck"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "ch16tr933400",
+                                    "created": 1641735958087,
+                                    "text": "RolePermissionCheck"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "ch16tv0syg00",
+                                    "created": 1641735966294,
+                                    "text": "UserPermissionCheck"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "ch16u4urhuo0",
+                            "created": 1641735987696,
+                            "text": "RaiseError",
+                            "layout_right_offset": {
+                                "x": 7,
+                                "y": 35.00000000000006
+                            }
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "ch16u67kf6o0",
+                                    "created": 1641735990647,
+                                    "text": "Need Auth"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "ch16ucc9onk0",
+                                    "created": 1641736003992,
+                                    "text": "Permission Denied"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "ch16uyj6rts0",
+                            "created": 1641736052300,
+                            "text": "路由修饰器",
+                            "layout_right_offset": {
+                                "x": 5,
+                                "y": -261
+                            }
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "ch16v29ytd40",
+                                    "created": 1641736060449,
+                                    "text": "NeedAuth：Default=True"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "ch16rwc9lv40",
+                    "created": 1641735812435,
+                    "text": "缓存",
+                    "layout_mind_offset": {
+                        "x": -12,
+                        "y": 98
+                    }
+                },
+                "children": []
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

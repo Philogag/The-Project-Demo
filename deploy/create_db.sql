@@ -1,0 +1,3 @@
+create user sport_meeting_management_user with password 'sport_meeting_management_user';
+create database sport_meeting_management_dev owner sport_meeting_management_user;
+GRANT ALL PRIVILEGES ON DATABASE sport_meeting_management_dev TO the_project_dev_user;

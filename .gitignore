@@ -1,0 +1,10 @@
+/.idea
+/.venv
+**/__pycache__
+**/log
+*.log
+
+/deploy/data
+/deploy/data.old
+/deploy/backend_venv
+*.toml

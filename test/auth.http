@@ -1,0 +1,30 @@
+## Login
+POST http://{{host}}/{{urlprefix}}/auth/login
+Content-Type: application/json
+
+{
+    "username": "philogag",
+    "password": "root"
+}
+
+> {%
+    client.global.set("access_token", response.body.result.token.accessToken);
+%}
+
+#### Get User Info
+GET http://{{host}}/{{urlprefix}}/test/
+Authorization: Bearer {{access_token}}
+
+
+#### Get User Info
+GET http://{{host}}/{{urlprefix}}/master-user/get-current-user-info
+Authorization: Bearer {{access_token}}
+
+
+#### get salt.
+GET http://{{host}}/{{urlprefix}}/auth/check
+Authorization: Bearer {{access_token}}
+
+#### Check Logout
+GET http://{{host}}/{{urlprefix}}/auth/logout
+Authorization: Bearer {{token}}

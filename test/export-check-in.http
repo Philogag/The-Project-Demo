@@ -1,0 +1,7 @@
+#### Login
+GET http://{{host}}/{{urlprefix}}/check-in-table/export/31509160-cb5d-40a7-90b5-95d272bff647
+Authorization: Bearer {{access_token}}
+
+#### Login
+GET http://{{host}}/{{urlprefix}}/check-in-table/export/6c5a3fbd-b0df-4809-8ec1-0d2995a07f57
+Authorization: Bearer {{access_token}}

@@ -15,7 +15,7 @@ route_permission = RoutePermissionHelper(enum_blueprint, group="枚举")
 
 
 @enum_blueprint.route("/<string:result_type>/<string:enum_name>", methods=["GET"])
-@route_permission.set(name="获取枚举", allow_all=True)
+@route_permission.set(name="获取枚举", login_required=False, allow_all=True)
 @basic_carrier_result()
 def route_get_enum_tuple(result_type, enum_name):
     """

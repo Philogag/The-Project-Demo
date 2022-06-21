@@ -1,0 +1,29 @@
+app_name = 'the_project_backend'
+secret_key = "12345678"
+static_folder = "static"
+template_folder = "templates"
+timezone = "Asia/Shanghai"
+
+[logger]
+config_file = 'backend/logger.conf'
+
+# this is the server config
+[db]
+type = "postgresql+psycopg2"
+host = "192.168.10.50"
+port = 5432
+db = 'test_db'
+username = 'test_username'
+password = 'test_password'
+
+
+[redis]
+# host = "192.168.10.50"
+host = "192.168.1.155"
+port = 6379
+db = 1
+password = "redis"
+
+[jwt]
+access_token_expires = 86400
+refresh_token_expires = 86400
